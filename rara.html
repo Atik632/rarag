@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For My Rara 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ffe4e1, #fff0f5);
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #ffb6c1;
+      color: white;
+      font-size: 2.5em;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .message {
+      font-size: 1.5em;
+      color: #333;
+      margin: 30px auto;
+      max-width: 600px;
+      background-color: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      margin: 10px;
+      color: white;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #ff1493;
+    }
+
+    .hearts {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .music {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <p>By Atik</p>
+
+  <header>💖 For My Rara 💖</header>
+
+  <div class="content">
+    <div class="message">
+      Rara, you are the most beautiful part of my life.  
+      Every moment with you is like a dream I never want to end.  
+      This website is a small piece of my heart for you. 💌
+    </div>
+
+    <button class="btn" onclick="showLove()">Click Here, My Love 💘</button>
+    <button class="btn" onclick="sendKiss()">Send a Kiss 💋</button>
+    <button class="btn" onclick="showMessage()">A Message for You 💬</button>
+    <button class="btn" onclick="whyLove()">Why I Love You 💖</button>
+    
+    <div class="music">
+      <button class="btn" onclick="playSong()">Play Our Song 🎵</button>
+      <audio id="song" src="fani_ellie-goulding-love-me-like-you-do-mp3 (1).mp3"></audio>
+    </div>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    function showLove() {
+      alert("I love you, Rara! 💖 Forever and always.");
+    }
+
+    function sendKiss() {
+      alert("Muaaah! 😘 A sweet kiss just for you, meri jaan Rara.");
+    }
+
+    function showMessage() {
+      alert("You are my sunshine, my peace, and my biggest blessing. 🌈🕊️");
+    }
+
+    function whyLove() {
+      alert("Because you’re caring, funny, beautiful, and mine 💕.");
+    }
+
+    function playSong() {
+      const audio = document.getElementById("song");
+      audio.play();
+    }
+
+    // Generate floating hearts
+    const heartContainer = document.getElementById('hearts');
+    for (let i = 0; i < 50; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      heartContainer.appendChild(heart);
+    }
+  </script>
+</body>
+</html>
